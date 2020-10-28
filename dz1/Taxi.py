@@ -6,6 +6,12 @@ import numpy as np
 import json
 import matplotlib.pyplot as plt
 
+"""
+В методе train агент обучается, гафик обучения лежит рядом с файлом.
+В файле data.json лежит уже сгенерированный агент.
+В методе test можно проверить работоспособость уже обученного агента.
+"""
+
 
 class Session:
 
@@ -126,7 +132,7 @@ def train():
     plt.plot(range(episode_n), rewards)
     plt.show()
 
-    agent.to_json('data.json')
+    # agent.to_json('data.json')
 
 
 def test():
